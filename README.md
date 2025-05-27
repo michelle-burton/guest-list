@@ -46,9 +46,12 @@ Displays the list of guests with a remove button for each entry.
 ```jsx
 👤 Michelle: "Excited to celebrate!"  [Remove]
 👤 Sam: "Bringing snacks!"            [Remove]
+`
+
+---
 
 
---- 
+
 ## 👩‍💻 Author
 
 - Made with 💻 + ☕ by Michelle Burton
