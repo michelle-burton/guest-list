@@ -78,21 +78,34 @@ const GuestInput = () => {
         <div className="max-w-xl mx-auto bg-white p-6 rounded shadow mt-10 space-y-6">
             <h1 className="text-2xl font-bold text-center text-indigo-700">🎉 Party Guest List</h1>
             <form onSubmit={handleForm} className="space-y-4">
-                <input
-                    type="text"
-                    value={values.name}
-                    onChange={handleChange}
-                    placeholder="enter name"
-                />
-                {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
-                <input
-                    type="text"
-                    value={values.message}
-                    onChange={handleChange}
-                    placeholder="Enter message"
-                />
-                {errors.message && <p style={{ color: 'red' }}>{errors.message}</p>}
-                <button type="submit" disabled={!isValid}>Add Guest</button>
+                <div>
+                    <input
+                        type="text"
+                        value={values.name}
+                        onChange={handleChange}
+                        placeholder="enter name"
+                        className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                    {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        value={values.message}
+                        onChange={handleChange}
+                        placeholder="Enter message"
+                        className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                    {errors.message && <p style={{ color: 'red' }}>{errors.message}</p>}
+                </div>
+                <button
+                    type="submit"
+                    className={`w-full px-4 py-2 font-semibold text-white rounded ${
+                        isValid
+                          ? 'bg-indigo-600 hover:bg-indigo-700'
+                          : 'bg-gray-300 cursor-not-allowed'
+                      }`}
+                >Add Guest</button>
             </form>
 
             <GuestList guestNames={guestNames} removeGuest={ removeGuest} />
