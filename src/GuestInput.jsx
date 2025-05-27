@@ -81,6 +81,7 @@ const GuestInput = () => {
                 <div>
                     <input
                         type="text"
+                        name="name"
                         value={values.name}
                         onChange={handleChange}
                         placeholder="enter name"
@@ -91,6 +92,7 @@ const GuestInput = () => {
                 <div>
                     <input
                         type="text"
+                        name="message"
                         value={values.message}
                         onChange={handleChange}
                         placeholder="Enter message"

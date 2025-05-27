@@ -16,7 +16,7 @@ export function useFormValidator(initialValues, validateFn) {
         setErrors(validationErrors)  // store errors
     };
 
-    const isValid = Object.keys(errors).length === 0;
+    const isValid = Object.keys(validateFn(values)).length === 0;
 
     return {
         values,
