@@ -75,9 +75,9 @@ const GuestInput = () => {
     }
 
     return (
-        <div>
-            <h1>🎉 Party Guest List</h1>
-            <form onSubmit={handleForm}>
+        <div className="max-w-xl mx-auto bg-white p-6 rounded shadow mt-10 space-y-6">
+            <h1 className="text-2xl font-bold text-center text-indigo-700">🎉 Party Guest List</h1>
+            <form onSubmit={handleForm} className="space-y-4">
                 <input
                     type="text"
                     value={values.name}
