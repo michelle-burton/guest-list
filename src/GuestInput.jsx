@@ -77,7 +77,6 @@ const GuestInput = () => {
     return (
         <div>
             <h1>🎉 Party Guest List</h1>
-            <h1 className="text-4xl font-bold text-blue-500">Tailwind is working 🎉</h1>
             <form onSubmit={handleForm}>
                 <input
                     type="text"
